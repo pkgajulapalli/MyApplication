@@ -1,0 +1,1 @@
+![Android CI](https://github.com/pkgajulapalli/MyApplication/workflows/Android%20CI/badge.svg?branch=master)
