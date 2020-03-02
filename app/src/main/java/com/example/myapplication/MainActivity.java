@@ -12,6 +12,7 @@ import com.example.myapplication.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     public static final String EXTRA_MESSAGE = "com.example.myapplication.MESSAGE";
+    private Intent displayActivityIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         binding.button.setOnClickListener(this::sendMessage);
+        displayActivityIntent = new Intent(this, DisplayMessageActivity.class);
     }
 
     /** Called when the user taps the Send button */
     private void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        String message = binding.editText.getText().toString();;
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        String message = binding.editText.getText().toString();
+        displayActivityIntent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(displayActivityIntent);
     }
 }
