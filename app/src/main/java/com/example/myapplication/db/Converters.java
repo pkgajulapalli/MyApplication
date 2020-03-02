@@ -1,18 +1,12 @@
 package com.example.myapplication.db;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
 import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 
-import com.example.myapplication.entity.Task;
 import com.example.myapplication.entity.TaskStatus;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
-@RequiresApi(api = Build.VERSION_CODES.O)
 public class Converters {
 
     private static final ZoneOffset ZONE_OFFSET = ZoneOffset.ofHoursMinutes(5, 30);
