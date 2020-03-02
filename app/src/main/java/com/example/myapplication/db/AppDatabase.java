@@ -12,7 +12,7 @@ import com.example.myapplication.entity.Task;
 
 @Database(entities = {Task.class}, version = 1, exportSchema = false)
 @TypeConverters({Converters.class})
-abstract class AppDatabase extends RoomDatabase {
+public abstract class AppDatabase extends RoomDatabase {
     public abstract TaskDao taskDao();
 
     private static AppDatabase INSTANCE = null;
