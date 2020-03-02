@@ -8,7 +8,6 @@ import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.example.myapplication.dao.TaskDao;
 import com.example.myapplication.db.AppDatabase;
-import com.example.myapplication.db.AppDatabase_Impl;
 import com.example.myapplication.entity.Task;
 import com.example.myapplication.entity.TaskStatus;
 
@@ -17,7 +16,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 
 import static org.junit.Assert.assertEquals;
